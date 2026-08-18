@@ -24,7 +24,7 @@ MODEL_NAME = "gemini-3.6-flash"
 # ------------------------------------------------------------
 # 1. YÖNTEM: API anahtarını direkt aşağıdaki tırnak işaretlerinin arasına yapıştırabilirsin.
 # Örnek: API_KEY = "AIzaSyB..."
-API_KEY = "AIzaSy_AQ.Ab8RN6IDmR2HntxZdGQHaCaBLbdZdKVYz8M6B-cGmPhIHasxOQ"
+API_KEY = "AQ.Ab8RN6LQwSWgll3qRysfwDgZLJfbxWpx9IkNdfBCWWX8I0R6hA"
 
 # Eğer yukarıya yazmadıysan Streamlit Secrets kontrol edilir
 if not API_KEY:
