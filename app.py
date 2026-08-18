@@ -1,37 +1,26 @@
 import base64
 import html
 import time
-
 import streamlit as st
 from google import genai
 from google.genai import types
 
-
-# ============================================================
 # OWLCHAT - TEK DOSYA SÜRÜMÜ
-# ============================================================
-
 st.set_page_config(
     page_title="OwlChat",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
-MODEL_NAME = "gemini-3.6-flash"
+MODEL_NAME = "gemini-2.5-flash"
 
-# ------------------------------------------------------------
 # API ANAHTARI
-# ------------------------------------------------------------
-# 1. YÖNTEM: API anahtarını direkt aşağıdaki tırnak işaretlerinin arasına yapıştırabilirsin.
-# Örnek: API_KEY = "AIzaSyB..."
-import streamlit as st
-import google.generativeai as genai
-
-# API Anahtarı Alımı
 API_KEY = "AQ.Ab8RN6LQwSWgll3qRysfwDgZLJfbxWpx9IkNdfBCWWX8I0R6hA"
 
 if "GEMINI_API_KEY" in st.secrets and st.secrets["GEMINI_API_KEY"]:
     API_KEY = st.secrets["GEMINI_API_KEY"]
+
+client = genai.Client(api_key=API_KEY)
 
 # Konfigürasyon
 if API_KEY:
