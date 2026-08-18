@@ -24,15 +24,16 @@ MODEL_NAME = "gemini-3.6-flash"
 # ------------------------------------------------------------
 # 1. YÖNTEM: API anahtarını direkt aşağıdaki tırnak işaretlerinin arasına yapıştırabilirsin.
 # Örnek: API_KEY = "AIzaSyB..."
+import streamlit as st
+import google.generativeai as genai
+
 API_KEY = "AQ.Ab8RN6LQwSWgll3qRysfwDgZLJfbxWpx9IkNdfBCWWX8I0R6hA"
 
 if "GEMINI_API_KEY" in st.secrets and st.secrets["GEMINI_API_KEY"]:
     API_KEY = st.secrets["GEMINI_API_KEY"]
 
 if API_KEY:
-    client = genai.Client(api_key=API_KEY)
-else:
-    client = None
+    genai.configure(api_key=API_KEY)
 # ------------------------------------------------------------
 # GÖMÜLÜ BAYKUŞ LOGOSU
 # ------------------------------------------------------------
