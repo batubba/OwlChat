@@ -29,7 +29,7 @@ API_KEY = "AQ.Ab8RN6LQwSWgll3qRysfwDgZLJfbxWpx9IkNdfBCWWX8I0R6hA"
 # Eğer yukarıya yazmadıysan Streamlit Secrets kontrol edilir
 if not API_KEY:
     try:
-        API_KEY = st.secrets["AQ.Ab8RN6IDmR2HntxZdGQHaCaBLbdZdKVYz8M6B-cGmPhIHasxOQ"]
+       API_KEY = st.secrets["AQ.Ab8RN6LQwSWgIl3qRysfwDgZLJfbxWpx9IkNdfBCWWX8I0R6hA"]
     except Exception:
         API_KEY = ""
 
