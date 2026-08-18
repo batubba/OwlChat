@@ -47,7 +47,7 @@ with st.sidebar:
     st.subheader("Geçmiş Sohbetler")
     st.caption("Bu oturumdaki mesajlar saklanır.")
 
-# Client oluşturma
+# CLIENT OLUSTURMA (Hatalı configure satırı tamamen kaldırıldı)
 client = genai.Client(api_key=API_KEY) if API_KEY else None
 
 # SOHBET AKIŞI
