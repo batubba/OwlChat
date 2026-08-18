@@ -26,13 +26,13 @@ MODEL_NAME = "gemini-3.6-flash"
 # Örnek: API_KEY = "AIzaSyB..."
 API_KEY = "AQ.Ab8RN6LQwSWgll3qRysfwDgZLJfbxWpx9IkNdfBCWWX8I0R6hA"
 
-# Eğer yukarıya yazmadıysan Streamlit Secrets kontrol edilir
-if not API_KEY:
-    try:
-       API_KEY = st.secrets["AQ.Ab8RN6LQwSWgIl3qRysfwDgZLJfbxWpx9IkNdfBCWWX8I0R6hA"]
-    except Exception:
-        API_KEY = ""
+if "GEMINI_API_KEY" in st.secrets and st.secrets["GEMINI_API_KEY"]:
+    API_KEY = st.secrets["GEMINI_API_KEY"]
 
+if API_KEY:
+    client = genai.Client(api_key=API_KEY)
+else:
+    client = None
 # ------------------------------------------------------------
 # GÖMÜLÜ BAYKUŞ LOGOSU
 # ------------------------------------------------------------
